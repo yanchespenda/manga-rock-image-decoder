@@ -20,7 +20,7 @@ module.exports = async (req, res) => {
     throw createError(400, 'Invalid .mri image URL');
   }
 
-  if (!/mrcdn\.info/i.test(imageUrl)) {
+  if (!/mrcdn\.info/i.test(imageUrl) && !/kakaopagecdn\.com/.test(imageUrl)) {
     throw createError(400, 'Only MangaRock URLs are accepted');
   }
 
